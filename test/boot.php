@@ -15,7 +15,7 @@ spl_autoload_register(function ($class) {
         $file = dirname(__DIR__) . "/example/{$path}.php";
     } elseif (0 === strpos($class,'MyLib\ArrUtil\Test\\')) {
         $path = str_replace('\\', '/', substr($class, strlen('MyLib\ArrUtil\Test\\')));
-        $file = dirname(__DIR__) . "/{$path}.php";
+        $file = __DIR__ . "/{$path}.php";
     } elseif (0 === strpos($class,'MyLib\ArrUtil\\')) {
         $path = str_replace('\\', '/', substr($class, strlen('MyLib\ArrUtil\\')));
         $file = dirname(__DIR__) . "/src/{$path}.php";
